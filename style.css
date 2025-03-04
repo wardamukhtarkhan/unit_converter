@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+h1 i {
+    margin-right: 10px;
+    color: #667eea;
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.unit-type-selector select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.conversion-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #667eea;
+}
+
+#swapBtn {
+    background: #667eea;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#swapBtn:hover {
+    background: #764ba2;
+    transform: rotate(180deg);
+}
+
+#convertBtn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#convertBtn:hover {
+    background: #764ba2;
+}
+
+.formula-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .conversion-section {
+        flex-direction: column;
+    }
+    
+    #swapBtn {
+        transform: rotate(90deg);
+    }
+    
+    #swapBtn:hover {
+        transform: rotate(270deg);
+    }
+} 

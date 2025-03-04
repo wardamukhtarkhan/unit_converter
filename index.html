@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-exchange-alt"></i> Smart Unit Converter</h1>
+        <div class="converter-box">
+            <div class="unit-type-selector">
+                <select id="unitType">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="speed">Speed</option>
+                </select>
+            </div>
+            <div class="conversion-section">
+                <div class="input-group">
+                    <input type="number" id="fromValue" placeholder="Enter value">
+                    <select id="fromUnit"></select>
+                </div>
+                <button id="swapBtn"><i class="fas fa-exchange-alt"></i></button>
+                <div class="input-group">
+                    <input type="number" id="toValue" readonly>
+                    <select id="toUnit"></select>
+                </div>
+            </div>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div class="formula-display" id="formulaDisplay"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
